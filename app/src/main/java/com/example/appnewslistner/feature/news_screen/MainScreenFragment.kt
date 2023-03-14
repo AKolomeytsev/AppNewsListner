@@ -1,9 +1,20 @@
 package com.example.appnewslistner.feature.news_screen
 
 import android.os.Bundle
+import android.view.View
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.appnewslistner.R
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class MainScreenFragment:Fragment(R.layout.fragment_main_screen) {
-
+    private val viewModel:MainScreenViewModel by viewModel()
+    private val text: TextView by lazy { requireActivity().findViewById(R.id.text1_fragment_main_screen) }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel.viewState.observe(viewLifecycleOwner,::render)
+    }
+    private fun render(viewState:ViewState){
+        text.text = viewState.articles.toString()
+    }
 }

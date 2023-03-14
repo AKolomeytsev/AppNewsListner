@@ -1,4 +1,4 @@
-package com.example.appnewslistner.feature.base
+package com.example.appnewslistner.base
 
 import android.content.Context
 import android.content.res.Configuration

@@ -1,8 +1,8 @@
-package com.example.appnewslistner.feature.news_screen
+package com.example.appnewslistner
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.appnewslistner.R
+import com.example.appnewslistner.feature.news_screen.MainScreenFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

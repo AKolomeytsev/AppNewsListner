@@ -40,6 +40,7 @@ dependencies {
     def gson = "2.10.1"
     def jsonapi_version = "2.9.0"
     def koin_android_version = "3.3.0"
+    def logging_version = "4.10.0"
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
@@ -63,4 +64,7 @@ dependencies {
     implementation "com.squareup.retrofit2:converter-gson:$jsonapi_version"
     //Koin
     implementation "io.insert-koin:koin-android:$koin_android_version"
+
+    //logger
+    implementation("com.squareup.okhttp3:logging-interceptor:$logging_version")
 }

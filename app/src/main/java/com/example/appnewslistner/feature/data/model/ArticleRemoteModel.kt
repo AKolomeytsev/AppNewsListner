@@ -3,12 +3,12 @@ package com.example.appnewslistner.feature.data.model
 import com.google.gson.annotations.SerializedName
 
 data class ArticleRemoteModel (
-    @SerializedName("autor")
-    val autor:String?
+    @SerializedName("author")
+    val author:String?=""
     ,@SerializedName("title")
-    val title:String?
+    val title:String?=""
     ,@SerializedName("description")
-    val description:String?
+    val description:String?=""
     ,@SerializedName("url")
-    val url:String?
+    val url:String?=""
     )

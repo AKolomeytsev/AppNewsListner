@@ -1,7 +1,8 @@
 package com.example.appnewslistner.feature.data.interfaces
 
-import com.example.appnewslistner.feature.data.domain.ArticleModel
+import com.example.appnewslistner.feature.domain.ArticleModel
+import com.example.appnewslistner.feature.data.model.ArticleRemoteModel
 
 interface INewsRepository {
-    suspend fun getNews():List<ArticleModel>
+    suspend fun getNews(): List<ArticleModel>
 }

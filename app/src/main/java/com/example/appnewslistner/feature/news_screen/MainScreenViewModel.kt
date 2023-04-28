@@ -4,7 +4,7 @@ import android.util.Log
 import androidx.lifecycle.viewModelScope
 import com.example.appnewslistner.base.BaseViewModel
 import com.example.appnewslistner.base.Event
-import com.example.appnewslistner.feature.data.domain.ArticlesInteractor
+import com.example.appnewslistner.feature.domain.ArticlesInteractor
 import kotlinx.coroutines.launch
 
 class MainScreenViewModel(private val interactor: ArticlesInteractor):BaseViewModel<ViewState>() {

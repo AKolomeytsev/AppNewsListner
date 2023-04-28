@@ -2,7 +2,7 @@ package com.example.appnewslistner.feature.di
 
 import com.example.appnewslistner.feature.data.ArticleRemoteSource
 import com.example.appnewslistner.feature.data.ArticlesRepositoryImp
-import com.example.appnewslistner.feature.data.domain.ArticlesInteractor
+import com.example.appnewslistner.feature.domain.ArticlesInteractor
 import com.example.appnewslistner.feature.data.interfaces.INewsApi
 import com.example.appnewslistner.feature.data.interfaces.INewsRepository
 import com.example.appnewslistner.feature.news_screen.MainScreenViewModel

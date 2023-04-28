@@ -1,5 +1,6 @@
-package com.example.appnewslistner.feature.data.domain
+package com.example.appnewslistner.feature.domain
 
+import com.example.appnewslistner.base.Either
 import com.example.appnewslistner.base.attempt
 import com.example.appnewslistner.feature.data.interfaces.INewsRepository
 

@@ -2,10 +2,10 @@ package com.example.appnewslistner.feature.news_screen
 
 
 import com.example.appnewslistner.base.Event
-import com.example.appnewslistner.feature.data.domain.ArticleModel
+import com.example.appnewslistner.feature.domain.ArticleModel
 
 data class ViewState(
-    val articles:List<ArticleModel>
+    val articles: List<ArticleModel>
 )
 
 sealed class DataEvent: Event {

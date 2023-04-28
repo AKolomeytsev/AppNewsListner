@@ -15,6 +15,6 @@ class MainScreenFragment:Fragment(R.layout.fragment_main_screen) {
         viewModel.viewState.observe(viewLifecycleOwner,::render)
     }
     private fun render(viewState:ViewState){
-        text.text = viewState.articles.toString()
+        text.text = viewState.articles.toString();
     }
 }

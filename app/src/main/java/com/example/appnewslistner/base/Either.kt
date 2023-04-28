@@ -1,4 +1,4 @@
-package com.example.appnewslistner.feature.base
+package com.example.appnewslistner.base
 
 sealed class Either<out LEFT, out RIGHT> {
 

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AppNewsListner</string>
+    <string name="headScreen">Главная</string>
+    <string name="bookmarkScreen">Закладки</string>
 </resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+    android:id="@+id/itemMain"
+    android:title="@string/headScreen"
+    android:icon="@drawable/baseline_article_24"
+    />
+
+    <item
+        android:id="@+id/itemBookmarks"
+        android:title="@string/bookmarkScreen"
+        android:icon="@drawable/baseline_star_24"
+        />
+
+</menu>

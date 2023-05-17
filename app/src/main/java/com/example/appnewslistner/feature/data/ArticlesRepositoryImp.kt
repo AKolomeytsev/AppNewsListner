@@ -7,6 +7,6 @@ import com.example.appnewslistner.feature.data.model.ArticleRemoteModel
 
 class ArticlesRepositoryImp(private val source: ArticleRemoteSource) : INewsRepository {
     override suspend fun getNews(): List<ArticleModel> {
-        return source.getArticles().articlesList.map { it.toDomain() }
+        return source.getArticles().articlesList.map { it.toDomain() }.sortedByDescending { it.publishedAt }
     }
 }

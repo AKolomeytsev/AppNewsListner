@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -34,6 +35,8 @@ android {
 
 dependencies {
 
+    implementation 'androidx.room:room-common:2.5.1'
+    implementation 'androidx.room:room-ktx:2.5.1'
     def lifecycle_version = "2.5.1"
     def retroFit_version = "2.9.0"
     def coroutines_version = "1.6.4"
@@ -41,6 +44,7 @@ dependencies {
     def jsonapi_version = "2.9.0"
     def koin_android_version = "3.3.0"
     def logging_version = "4.10.0"
+    def room_version = "2.5.1"
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
@@ -66,5 +70,10 @@ dependencies {
     implementation "io.insert-koin:koin-android:$koin_android_version"
 
     //logger
-    implementation("com.squareup.okhttp3:logging-interceptor:$logging_version")
+    implementation "com.squareup.okhttp3:logging-interceptor:$logging_version"
+
+    //room
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-ktx:$room_version" 
 }

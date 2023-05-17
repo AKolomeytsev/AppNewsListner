@@ -1,7 +1,9 @@
 package com.example.appnewslistner
 
 import android.app.Application
-import com.example.appnewslistner.di.appModule
+import com.example.appnewslistner.di.databaseModule
+import com.example.appnewslistner.di.networkModule
+import com.example.appnewslistner.feature.bookmarks.ui.di.bookmarksModule
 import com.example.appnewslistner.feature.di.mainScreenModel
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -14,7 +16,7 @@ class App:Application() {
         startKoin{
             androidLogger()
             androidContext(this@App)
-            modules(appModule, mainScreenModel)
+            modules(networkModule, mainScreenModel, bookmarksModule, databaseModule)
         }
     }
 }

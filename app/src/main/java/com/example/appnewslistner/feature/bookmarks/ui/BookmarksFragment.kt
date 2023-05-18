@@ -5,11 +5,9 @@ import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.example.appnewslistner.R
-import com.example.appnewslistner.feature.bookmarks.ui.data.local.mapper.toEntity
-import com.example.appnewslistner.feature.news_screen.ArticlesAdapter
-import com.example.appnewslistner.feature.news_screen.MainScreenViewModel
+import com.example.appnewslistner.feature.bookmarks.ui.domain.BookmarksScreenViewModel
 import com.example.appnewslistner.feature.news_screen.UiEvent
-import com.example.appnewslistner.feature.news_screen.ViewState
+
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class BookmarksFragment:Fragment(R.layout.fragment_bookmarks) {
@@ -25,7 +23,7 @@ class BookmarksFragment:Fragment(R.layout.fragment_bookmarks) {
     }
 
     private fun render(viewState:ViewState){
-        adapter.setDate(viewState.articles)
+        adapter.setDate(viewState.bookmarksArticles)
 
     }
 }

@@ -1,12 +1,11 @@
-package com.example.appnewslistner.feature.bookmarks.ui
+package com.example.appnewslistner.feature.bookmarks.ui.domain
 
 import androidx.lifecycle.viewModelScope
 import com.example.appnewslistner.base.BaseViewModel
 import com.example.appnewslistner.base.Event
+import com.example.appnewslistner.feature.bookmarks.ui.DataEvent
+import com.example.appnewslistner.feature.bookmarks.ui.ViewState
 import com.example.appnewslistner.feature.bookmarks.ui.data.local.domain.BookmarksIterator
-import com.example.appnewslistner.feature.bookmarks.ui.domain.DataEvent
-import com.example.appnewslistner.feature.bookmarks.ui.domain.ViewState
-import com.example.appnewslistner.feature.domain.ArticlesInteractor
 import kotlinx.coroutines.launch
 
 class BookmarksScreenViewModel(private val iterator:BookmarksIterator):BaseViewModel<ViewState>() {

@@ -1,4 +1,4 @@
-package com.example.appnewslistner.feature.news_screen
+package com.example.appnewslistner.feature.bookmarks.ui
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.appnewslistner.R
 import com.example.appnewslistner.feature.domain.ArticleModel
 
-class ArticlesAdapter(val onItemCliced:(Int)->Unit):RecyclerView.Adapter<ArticlesAdapter.ViewHolder>() {
+class BookmarksAdapter(val onItemCliced:(Int)->Unit):RecyclerView.Adapter<BookmarksAdapter.ViewHolder>() {
 
     private var articlesData:List<ArticleModel> = emptyList()
     /**
@@ -16,8 +16,8 @@ class ArticlesAdapter(val onItemCliced:(Int)->Unit):RecyclerView.Adapter<Article
      * (custom ViewHolder)
      */
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val textView: TextView =  view.findViewById(R.id.heaerArticle)
-        val dateNews: TextView = view.findViewById(R.id.dateNews)
+        val headText: TextView =  view.findViewById(R.id.heaerArticle)
+        val dateText: TextView = view.findViewById(R.id.dateNews)
     }
 
     // Create new views (invoked by the layout manager)
@@ -37,8 +37,8 @@ class ArticlesAdapter(val onItemCliced:(Int)->Unit):RecyclerView.Adapter<Article
         viewHolder.itemView.setOnClickListener{
             onItemCliced.invoke(position)
         }
-        viewHolder.textView.text = articlesData[position].title
-        viewHolder.dateNews.text = articlesData[position].publishedAt
+        viewHolder.headText.text = articlesData[position].title
+        viewHolder.dateText.text = articlesData[position].publishedAt
     }
 
     // Return the size of your dataset (invoked by the layout manager)

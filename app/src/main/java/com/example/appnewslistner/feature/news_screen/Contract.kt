@@ -8,7 +8,11 @@ data class ViewState(
     val articles: List<ArticleModel>
 )
 
+sealed class UiEvent:Event{
+    data class OnArticleCliked(val index: Int):UiEvent()
+}
 sealed class DataEvent: Event {
     object LoadArticles:DataEvent()
     data class OnLoadArticlesSucceed(val articles: List<ArticleModel>):DataEvent()
+
 }

@@ -11,7 +11,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class MainScreenFragment:Fragment(R.layout.fragment_main_screen) {
     private val viewModel:MainScreenViewModel by viewModel()
     private val recyclerView:RecyclerView by lazy { requireActivity().findViewById(R.id.listView) }
-    private val adapter:ArticlesAdapter by lazy { ArticlesAdapter() }
+    private val adapter:ArticlesAdapter by lazy { ArticlesAdapter{index -> viewModel.processUiEvent(UiEvent.OnArticleCliked(index))} }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

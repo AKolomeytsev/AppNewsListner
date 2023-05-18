@@ -1,4 +1,4 @@
-package com.example.appnewslistner.feature.bookmarks.ui.domain
+package com.example.appnewslistner.feature.bookmarks.ui
 
 import com.example.appnewslistner.base.Event
 import com.example.appnewslistner.feature.domain.ArticleModel

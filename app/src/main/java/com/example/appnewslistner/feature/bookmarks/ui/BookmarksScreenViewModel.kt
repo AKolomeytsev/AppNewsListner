@@ -6,9 +6,10 @@ import com.example.appnewslistner.base.Event
 import com.example.appnewslistner.feature.bookmarks.ui.DataEvent
 import com.example.appnewslistner.feature.bookmarks.ui.ViewState
 import com.example.appnewslistner.feature.bookmarks.ui.data.local.domain.BookmarksIterator
+import com.example.appnewslistner.feature.bookmarks.ui.UiEvent
 import kotlinx.coroutines.launch
 
-class BookmarksScreenViewModel(private val iterator:BookmarksIterator):BaseViewModel<ViewState>() {
+class BookmarksScreenViewModel(private val iterator:BookmarksIterator, private val bookmarksIterator: BookmarksIterator):BaseViewModel<ViewState>() {
 
     init {
         processDataEvent(DataEvent.LoadBookmarks)
@@ -30,6 +31,12 @@ class BookmarksScreenViewModel(private val iterator:BookmarksIterator):BaseViewM
             }
             is DataEvent.OnSuccesBookmarksLoaded->{
                 return previousState.copy(event.bookmarksArticles)
+            }
+            is UiEvent.OnArticleBasketCliked->{
+                viewModelScope.launch {
+                    bookmarksIterator.delete(previousState.bookmarksArticles[event.index])
+                }
+                return null
             }
             else->return null
         }

@@ -16,15 +16,17 @@ class BookmarksAdapter(val onItemCliced:(Int)->Unit):RecyclerView.Adapter<Bookma
      * (custom ViewHolder)
      */
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        val headText: TextView =  view.findViewById(R.id.heaerArticle)
-        val dateText: TextView = view.findViewById(R.id.dateNews)
+        val headText: TextView =  view.findViewById(R.id.heaerArticleBookMarks)
+        val dateText: TextView = view.findViewById(R.id.dateNewsBookMarks)
+        val bottomBasket: View = view.findViewById(R.id.bottomDelete)
+
     }
 
     // Create new views (invoked by the layout manager)
     override fun onCreateViewHolder(viewGroup: ViewGroup, viewType: Int): ViewHolder {
         // Create a new view, which defines the UI of the list item
         val view = LayoutInflater.from(viewGroup.context)
-            .inflate(R.layout.item_article, viewGroup, false)
+            .inflate(R.layout.item_article_bookmarks, viewGroup, false)
 
         return ViewHolder(view)
     }
@@ -35,6 +37,9 @@ class BookmarksAdapter(val onItemCliced:(Int)->Unit):RecyclerView.Adapter<Bookma
         // Get element from your dataset at this position and replace the
         // contents of the view with that element
         viewHolder.itemView.setOnClickListener{
+            onItemCliced.invoke(position)
+        }
+        viewHolder.bottomBasket.setOnClickListener{
             onItemCliced.invoke(position)
         }
         viewHolder.headText.text = articlesData[position].title

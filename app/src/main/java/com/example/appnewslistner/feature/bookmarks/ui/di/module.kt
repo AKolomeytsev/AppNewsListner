@@ -22,6 +22,6 @@ val bookmarksModule = module {
         BookmarksIterator(bookmarksRepository = get())
     }
     single {
-        BookmarksScreenViewModel(iterator = get())
+        BookmarksScreenViewModel(iterator = get(), bookmarksIterator = get())
     }
 }
